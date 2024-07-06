@@ -142,6 +142,58 @@
   width: 122px;
 }
 
+.caroussel {
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  margin-top: 50px;
+}
+.caroussel img {
+  border-radius: 25px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  max-height: 415px;
+  max-width: 1240px;
+}
+.caroussel .boutonDir {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  max-width: 1240px;
+}
+.caroussel .boutonDir .precedent, .caroussel .boutonDir .suivant {
+  pointer-events: auto;
+  font-size: 79px;
+  background: none;
+  border: none;
+  color: rgb(255, 255, 255);
+}
+.caroussel .boutonDir .precedent {
+  margin-left: 20px;
+}
+.caroussel .boutonDir .suivant {
+  margin-right: 20px;
+}
+.caroussel .compteur {
+  position: absolute;
+  bottom: 0; /* Aligne le compteur en bas du carrousel */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 18px;
+}
+
 .error {
   display: flex;
   align-items: center;
@@ -407,7 +459,7 @@
   padding-left: 15px;
   border-radius: 5px;
 }
-.about .boxCrit .aboutList .groupAbout .title {
+.about .boxCrit .aboutList .groupAbout h2 {
   font-size: 24px;
   font-weight: 700;
   color: white;
@@ -475,7 +527,44 @@
     margin-top: 19px;
     margin-bottom: 19px;
   }
-  .about .boxCrit .aboutList .groupAbout .title {
+  .about .boxCrit .aboutList .groupAbout h2 {
     font-size: 18px;
   }
+}
+.logementPerso {
+  font-family: "Montserrat", sans-serif;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.logementPerso h2 {
+  font-size: 36px;
+  color: #ff6060;
+  font-weight: 500;
+  margin: 0;
+  margin-top: 30px;
+}
+.logementPerso .zone {
+  font-size: 18px;
+  margin: 0;
+  margin-top: 8px;
+  font-weight: 500;
+}
+.logementPerso .tags {
+  display: flex;
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+.logementPerso .tags p {
+  display: flex;
+  font-weight: 700;
+  font-size: 14px;
+  background-color: #ff6060;
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+  padding-right: 40px;
+  padding-left: 40px;
+  margin: 0;
+  margin-right: 10px;
 }/*# sourceMappingURL=main.css.map */

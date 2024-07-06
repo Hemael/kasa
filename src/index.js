@@ -10,6 +10,8 @@ import Home from './pages/home';
 import Error from './pages/error';
 import About from './pages/about';
 import Layout from './components/layout';
+import LogementDetails from './pages/logementDetails'; 
+
 
 
 const router = createBrowserRouter([
@@ -23,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/a-propos",
         element: <About/>,
+      },
+      {
+      path: "/logement/:id", 
+      element: <LogementDetails />, 
       },
       {
         path: "*",

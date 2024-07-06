@@ -1,14 +1,16 @@
 @import "./abstracts/variables";
 
 @import "./components/animations";
-@import "./components/depli";
 
 @import "./layout/header";
 @import "./layout/footer";
+@import "./layout/caroussel";
 
 
 @import "./pages/error";
 @import "./pages/home";
 @import "./pages/about";
+@import "./pages/logementDetails";
+
 
 

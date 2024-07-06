@@ -1,0 +1,57 @@
+.caroussel {
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    position: relative; 
+    margin-top: 50px;
+    
+    img {
+        border-radius: 25px;
+        object-fit: cover;
+        width: 100%;
+        max-height: 415px;
+        max-width: 1240px;
+    }
+
+    .boutonDir {
+        position: absolute; 
+        top: 50%; 
+        transform: translateY(-50%); 
+        z-index: 1; 
+        width: 100%;
+        display: flex;
+        justify-content: space-between; 
+        pointer-events: none; 
+        max-width: 1240px;
+
+        .precedent, .suivant {
+            pointer-events: auto; 
+            font-size: 79px;
+            background: none;
+            border: none;
+            color: rgb(255, 255, 255);
+
+        }
+
+        .precedent {
+            margin-left: 20px; 
+        }
+
+        .suivant {
+            margin-right: 20px; 
+        }
+    }
+    
+    .compteur {
+        position: absolute; 
+        bottom: 0; /* Aligne le compteur en bas du carrousel */
+        width: 100%;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        pointer-events: none; 
+        margin-bottom: 20px;
+        color: white;
+        font-size: 18px;
+    }
+}
