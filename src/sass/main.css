@@ -606,18 +606,24 @@
 .logementPerso .box {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .logementPerso .box .boxCrit {
-  flex: 0 0 582px;
+  flex: 0 1 582px; /* Prend toute la largeur par défaut */
   max-width: 582px;
+  margin-bottom: 20px; /* Ajouté pour espacement vertical */
+}
+@media (min-width: 800px) {
+  .logementPerso .box .boxCrit {
+    flex: 0 1 48%; /* 48% de largeur sur écrans moyens et grands */
+  }
 }
 .logementPerso .box .boxCrit .aboutList {
   margin-bottom: 15px;
 }
 .logementPerso .box .boxCrit .aboutList .groupAbout {
-  max-width: 582px;
-  max-height: 53px;
-  background-color: #FF6060;
+  max-width: 100%; /* Ajusté pour une meilleure réactivité */
+  background-color: #ff6060;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -655,4 +661,112 @@
 }
 .logementPerso .box .boxCrit .descrip p {
   margin: 5px;
+}
+
+@media only screen and (max-width: 799px) {
+  .logementPerso {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .logementPerso .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .logementPerso .box .boxCrit {
+    flex: 1;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .logementPerso .des {
+    flex-wrap: wrap;
+  }
+  .logementPerso .des .host p {
+    text-align: start;
+    order: 2;
+    margin-right: 0px;
+    margin-left: 10px;
+  }
+  .logementPerso .tagRac {
+    flex-wrap: wrap;
+  }
+  .logementPerso .tagRac .tags {
+    order: 1;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .caroussel img {
+    border-radius: 10px;
+    height: 255px;
+    width: 335px;
+  }
+  .caroussel .boutonDir .precedent, .caroussel .boutonDir .suivant {
+    font-size: 40px;
+  }
+  .caroussel .compteur {
+    display: none;
+  }
+  .logementPerso {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .logementPerso .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .logementPerso .box .boxCrit {
+    flex: 1;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .logementPerso .des {
+    flex-wrap: wrap;
+  }
+  .logementPerso .des .nameLoc h2 {
+    font-size: 18px;
+  }
+  .logementPerso .des .nameLoc .zone {
+    font-size: 14px;
+  }
+  .logementPerso .des .host p {
+    order: 0;
+    text-align: end;
+    order: none;
+    margin-right: 0px;
+    margin-left: 10px;
+    margin-right: 5px;
+    font-size: 12px;
+  }
+  .logementPerso .des .host img {
+    order: none;
+    height: 32px;
+    width: 32px;
+  }
+  .logementPerso .tagRac {
+    flex-wrap: wrap;
+  }
+  .logementPerso .tagRac .tags p {
+    font-size: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    flex-wrap: wrap;
+  }
+  .logementPerso .tagRac .starBox {
+    order: 1;
+  }
+  .logementPerso .tagRac .starBox .starContent img {
+    max-height: 18px;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  .logementPerso .box .boxCrit {
+    margin-bottom: 15PX;
+  }
+  .logementPerso .box .boxCrit .aboutList .groupAbout h2 {
+    font-size: 13px;
+  }
+  .logementPerso .box .boxCrit .aboutList .groupAbout .arrow {
+    font-size: 13px;
+  }
 }/*# sourceMappingURL=main.css.map */
