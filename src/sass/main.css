@@ -561,23 +561,28 @@
 .logementPerso .des .host p {
   max-width: 76px;
   max-height: 52px;
-  margin-right: 0px;
+  margin-right: 10px;
   font-size: 18px;
   font-weight: 500;
   color: #ff6060;
+  text-align: end;
 }
 .logementPerso .des .host img {
   max-width: 64px;
   max-height: 64px;
   border-radius: 32px;
 }
-.logementPerso .tags {
+.logementPerso .tagRac {
+  display: flex;
+  justify-content: space-between;
+}
+.logementPerso .tagRac .tags {
   display: flex;
   margin: 0;
   margin-top: 20px;
   margin-bottom: 24px;
 }
-.logementPerso .tags p {
+.logementPerso .tagRac .tags p {
   display: flex;
   font-weight: 700;
   font-size: 14px;
@@ -589,6 +594,14 @@
   padding-left: 40px;
   margin: 0;
   margin-right: 10px;
+}
+.logementPerso .tagRac .starBox {
+  display: flex;
+  align-items: center;
+}
+.logementPerso .tagRac .starBox .starContent img {
+  width: 24px;
+  margin: 3px;
 }
 .logementPerso .box {
   display: flex;

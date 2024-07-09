@@ -8,10 +8,6 @@ const SlideShow = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  if (!logement) {
-    return <div>Aucun logement trouvé</div>;
-  }
-
   const handleNext = () => {
     setCurrentIndex((currentIndex + 1) % logement.pictures.length);
   };
@@ -23,10 +19,12 @@ const SlideShow = () => {
   return (
     <div className="caroussel">
       <img src={logement.pictures[currentIndex]} alt={logement.title} />
-      <div className='boutonDir'>
-        <button onClick={handlePrev} className='precedent'> ‹ </button>
-        <button onClick={handleNext} className='suivant'> › </button>
-      </div>
+      {logement.pictures.length > 1 && (
+        <div className='boutonDir'>
+          <button onClick={handlePrev} className='precedent'> ‹ </button>
+          <button onClick={handleNext} className='suivant'> › </button>
+        </div>
+      )}
       <div className='compteur'>
         {currentIndex + 1}/{logement.pictures.length}
       </div>

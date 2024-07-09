@@ -6,9 +6,9 @@ const LogementsList = () => {
     <div className="boxLogements">
       {logements.map((logement, id) => (
   
-        <Link to={`/logement/${logement.id}`}>
+        <Link key={id} to={`/logement/${logement.id}`}>
 
-          <div key={id} className="logement">
+          <div  className="logement">
             <img src={logement.cover} alt={logement.title} className="picture"/>
             <h2 className="title">{logement.title}</h2>
           </div>

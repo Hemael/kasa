@@ -33,10 +33,11 @@
             p{
                 max-width: 76px;
                 max-height: 52px;
-                margin-right: 0px;
+                margin-right: 10px;
                 font-size: 18px;
                 font-weight: 500;
                 color: $roserange;
+                text-align: end;
     
             }
             img{
@@ -45,32 +46,57 @@
                 border-radius: 32px;
             }
         }
+
     }
 
-
-
-
-
-    .tags{
+    .tagRac{
         display: flex;
-        margin:0;
-        margin-top: 20px;
-        margin-bottom: 24px;
+        justify-content: space-between;
 
-        p{
+        .tags{
             display: flex;
-            font-weight: 700;
-            font-size: 14px;
-            background-color:  $roserange;
-            color: white;
-            border-radius: 10px;
-            padding: 5px;
-            padding-right: 40px;
-            padding-left: 40px;
-            margin: 0;
-            margin-right: 10px;
+            margin:0;
+            margin-top: 20px;
+            margin-bottom: 24px;
+    
+            p{
+                display: flex;
+                font-weight: 700;
+                font-size: 14px;
+                background-color:  $roserange;
+                color: white;
+                border-radius: 10px;
+                padding: 5px;
+                padding-right: 40px;
+                padding-left: 40px;
+                margin: 0;
+                margin-right: 10px;
+            }
+        }   
+
+        .starBox{
+            display: flex;
+            align-items: center;
+
+            .starContent{
+            
+                img{
+                    width: 24px;
+                    margin: 3px;
+    
+                }
+    
+            }
+            
         }
+
     }
+
+
+
+
+
+
 
 
     .box{

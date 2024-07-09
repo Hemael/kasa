@@ -10,7 +10,8 @@ import Home from './pages/home';
 import Error from './pages/error';
 import About from './pages/about';
 import Layout from './components/layout';
-import LogementDetails from './pages/logementDetails'; 
+import LogementInfo from './pages/logementInfo';
+
 
 
 
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
       },
       {
       path: "/logement/:id", 
-      element: <LogementDetails />, 
+      element: <LogementInfo />, 
       },
       {
         path: "*",
