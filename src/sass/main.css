@@ -536,18 +536,40 @@
   max-width: 1240px;
   margin: 0 auto;
 }
-.logementPerso h2 {
+.logementPerso .des {
+  display: flex;
+  justify-content: space-between;
+}
+.logementPerso .des .nameLoc h2 {
   font-size: 36px;
   color: #ff6060;
   font-weight: 500;
   margin: 0;
   margin-top: 30px;
 }
-.logementPerso .zone {
+.logementPerso .des .nameLoc .zone {
   font-size: 18px;
   margin: 0;
   margin-top: 8px;
   font-weight: 500;
+}
+.logementPerso .des .host {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+.logementPerso .des .host p {
+  max-width: 76px;
+  max-height: 52px;
+  margin-right: 0px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ff6060;
+}
+.logementPerso .des .host img {
+  max-width: 64px;
+  max-height: 64px;
+  border-radius: 32px;
 }
 .logementPerso .tags {
   display: flex;
@@ -567,4 +589,57 @@
   padding-left: 40px;
   margin: 0;
   margin-right: 10px;
+}
+.logementPerso .box {
+  display: flex;
+  justify-content: space-between;
+}
+.logementPerso .box .boxCrit {
+  flex: 0 0 582px;
+  max-width: 582px;
+}
+.logementPerso .box .boxCrit .aboutList {
+  margin-bottom: 15px;
+}
+.logementPerso .box .boxCrit .aboutList .groupAbout {
+  max-width: 582px;
+  max-height: 53px;
+  background-color: #FF6060;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+  border-radius: 5px;
+}
+.logementPerso .box .boxCrit .aboutList .groupAbout h2 {
+  margin: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+}
+.logementPerso .box .boxCrit .aboutList .groupAbout .arrow {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.logementPerso .box .boxCrit .descrip {
+  background-color: #F6F6F6;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: justify;
+}
+.logementPerso .box .boxCrit .descrip .content scale-out-ver-top {
+  background-color: #F6F6F6;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: justify;
+}
+.logementPerso .box .boxCrit .descrip p {
+  margin: 5px;
 }/*# sourceMappingURL=main.css.map */

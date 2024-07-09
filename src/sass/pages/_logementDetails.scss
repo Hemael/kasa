@@ -2,21 +2,55 @@
     font-family: "Montserrat", sans-serif;
     max-width: 1240px;
     margin: 0 auto;
-    h2{
-        font-size: 36px;
-        color: $roserange;
-        font-weight: 500;
-        margin: 0;
-        margin-top: 30px;
 
+    .des{
+        display: flex;
+        justify-content: space-between;
+
+        .nameLoc{
+
+            h2{
+                font-size: 36px;
+                color: $roserange;
+                font-weight: 500;
+                margin: 0;
+                margin-top: 30px;
+        
+            }
+            .zone{
+                font-size: 18px;
+                margin: 0;
+                margin-top: 8px;
+                font-weight: 500;
+            }
+        }
+
+        .host{
+            display: flex;
+            align-items: center;
+            margin-top: 25px;
+    
+            p{
+                max-width: 76px;
+                max-height: 52px;
+                margin-right: 0px;
+                font-size: 18px;
+                font-weight: 500;
+                color: $roserange;
+    
+            }
+            img{
+                max-width: 64px;
+                max-height: 64px;
+                border-radius: 32px;
+            }
+        }
     }
 
-    .zone{
-        font-size: 18px;
-        margin: 0;
-        margin-top: 8px;
-        font-weight: 500;
-    }
+
+
+
+
     .tags{
         display: flex;
         margin:0;
@@ -37,4 +71,75 @@
             margin-right: 10px;
         }
     }
+
+
+    .box{
+        display: flex;
+        justify-content: space-between;
+
+
+        .boxCrit{
+            flex: 0 0 582px; 
+            max-width: 582px;
+    
+    
+            .aboutList{
+                margin-bottom: 15px;
+    
+                .groupAbout{
+                    max-width: 582px;
+                    max-height: 53px;
+                    background-color: #FF6060;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-left: 15px;
+                    border-radius: 5px;
+    
+    
+    
+                    h2{  
+                        margin: 10px;
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: white;
+                    }
+    
+                    .arrow{
+                        padding-right: 10px;
+                        padding-left: 10px;
+                    }
+                }
+            }
+            .descrip{
+    
+                background-color: #F6F6F6;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                margin-top: 0px;
+                padding-left: 15px;
+                padding-right: 15px;
+                text-align : justify;
+    
+                .content scale-out-ver-top{
+    
+                    background-color: #F6F6F6;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    margin-top: 0px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    text-align : justify;
+        
+                }
+
+                p{
+                    margin: 5px;
+                }
+    
+            }
+        }
+    }
+
 }
