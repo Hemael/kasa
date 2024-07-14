@@ -538,7 +538,7 @@
 }
 .logementPerso .des {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 .logementPerso .des .nameLoc h2 {
   font-size: 36px;
@@ -553,24 +553,27 @@
   margin-top: 8px;
   font-weight: 500;
 }
-.logementPerso .des .host {
+.logementPerso .des .tagRac {
   display: flex;
-  align-items: center;
-  margin-top: 25px;
 }
-.logementPerso .des .host p {
-  max-width: 76px;
-  max-height: 52px;
+.logementPerso .des .tagRac .tags {
+  display: flex;
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+.logementPerso .des .tagRac .tags p {
+  display: flex;
+  font-weight: 700;
+  font-size: 14px;
+  background-color: #ff6060;
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+  padding-right: 40px;
+  padding-left: 40px;
+  margin: 0;
   margin-right: 10px;
-  font-size: 18px;
-  font-weight: 500;
-  color: #ff6060;
-  text-align: end;
-}
-.logementPerso .des .host img {
-  max-width: 64px;
-  max-height: 64px;
-  border-radius: 32px;
 }
 .logementPerso .tagRac {
   display: flex;
@@ -581,6 +584,7 @@
   margin: 0;
   margin-top: 20px;
   margin-bottom: 24px;
+  flex-wrap: wrap;
 }
 .logementPerso .tagRac .tags p {
   display: flex;
@@ -595,11 +599,31 @@
   margin: 0;
   margin-right: 10px;
 }
-.logementPerso .tagRac .starBox {
+.logementPerso .racName .host {
   display: flex;
   align-items: center;
+  margin-top: 25px;
 }
-.logementPerso .tagRac .starBox .starContent img {
+.logementPerso .racName .host p {
+  max-width: 76px;
+  max-height: 52px;
+  margin-right: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ff6060;
+  text-align: end;
+}
+.logementPerso .racName .host img {
+  max-width: 64px;
+  max-height: 64px;
+  border-radius: 32px;
+}
+.logementPerso .racName .starBox {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.logementPerso .racName .starBox .starContent img {
   width: 24px;
   margin: 3px;
 }
@@ -610,19 +634,19 @@
 }
 .logementPerso .box .boxCrit {
   flex: 0 1 582px; /* Prend toute la largeur par défaut */
-  max-width: 582px;
-  margin-bottom: 20px; /* Ajouté pour espacement vertical */
+  max-width: 782px;
+  margin-bottom: 20px;
 }
 @media (min-width: 800px) {
   .logementPerso .box .boxCrit {
-    flex: 0 1 48%; /* 48% de largeur sur écrans moyens et grands */
+    flex: 0 1 48%;
   }
 }
 .logementPerso .box .boxCrit .aboutList {
   margin-bottom: 15px;
 }
 .logementPerso .box .boxCrit .aboutList .groupAbout {
-  max-width: 100%; /* Ajusté pour une meilleure réactivité */
+  max-width: 100%;
   background-color: #ff6060;
   display: flex;
   flex-direction: row;
@@ -662,6 +686,11 @@
 .logementPerso .box .boxCrit .descrip p {
   margin: 5px;
 }
+.logementPerso .placement {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
 @media only screen and (max-width: 799px) {
   .logementPerso {
@@ -674,24 +703,33 @@
     align-items: center;
   }
   .logementPerso .box .boxCrit {
+    width: 799px;
     flex: 1;
     width: 100%;
     margin-bottom: 20px;
   }
-  .logementPerso .des {
+  .logementPerso .placement .des {
     flex-wrap: wrap;
   }
-  .logementPerso .des .host p {
+  .logementPerso .placement .des .host p {
     text-align: start;
     order: 2;
     margin-right: 0px;
     margin-left: 10px;
   }
-  .logementPerso .tagRac {
+  .logementPerso .placement .des .tagRac {
     flex-wrap: wrap;
   }
-  .logementPerso .tagRac .tags {
+  .logementPerso .placement .des .tagRac .tags {
     order: 1;
+  }
+  .logementPerso .placement .des .tagRac .tags p {
+    margin-top: 10px;
+  }
+  .logementPerso .placement .racName {
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -707,6 +745,7 @@
     display: none;
   }
   .logementPerso {
+    max-width: 400px;
     margin-left: 20px;
     margin-right: 20px;
   }
@@ -729,7 +768,28 @@
   .logementPerso .des .nameLoc .zone {
     font-size: 14px;
   }
-  .logementPerso .des .host p {
+  .logementPerso .des .tagRac {
+    flex-wrap: wrap;
+  }
+  .logementPerso .des .tagRac .tags p {
+    margin-top: 5px;
+    font-size: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .logementPerso .racName {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+  }
+  .logementPerso .racName .host {
+    order: 1;
+    margin-top: 0;
+    margin-bottom: 13px;
+  }
+  .logementPerso .racName .host p {
     order: 0;
     text-align: end;
     order: none;
@@ -738,10 +798,20 @@
     margin-right: 5px;
     font-size: 12px;
   }
-  .logementPerso .des .host img {
+  .logementPerso .racName .host img {
     order: none;
     height: 32px;
     width: 32px;
+  }
+  .logementPerso .racName .starBox {
+    order: 0;
+    display: flex;
+    align-items: center;
+    margin-top: -10px;
+  }
+  .logementPerso .racName .starBox .starContent img {
+    width: 18px;
+    margin: 3px;
   }
   .logementPerso .tagRac {
     flex-wrap: wrap;
@@ -751,6 +821,7 @@
     padding-right: 20px;
     padding-left: 20px;
     flex-wrap: wrap;
+    border-radius: 8px;
   }
   .logementPerso .tagRac .starBox {
     order: 1;
@@ -767,6 +838,12 @@
     font-size: 13px;
   }
   .logementPerso .box .boxCrit .aboutList .groupAbout .arrow {
-    font-size: 13px;
+    height: 20px;
+    width: auto;
+  }
+  .logementPerso .placement {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 }/*# sourceMappingURL=main.css.map */

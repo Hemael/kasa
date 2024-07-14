@@ -3,9 +3,10 @@
     max-width: 1240px;
     margin: 0 auto;
 
+
    .des{
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
 
        .nameLoc{
 
@@ -25,7 +26,71 @@
             }
         }
 
-       .host{
+        .tagRac{
+            display: flex;
+
+    
+           .tags{
+                display: flex;
+                margin:0;
+                margin-top: 20px;
+                margin-bottom: 24px;
+        
+                p{
+                    display: flex;
+                    font-weight: 700;
+                    font-size: 14px;
+                    background-color:  $roserange;
+                    color: white;
+                    border-radius: 10px;
+                    padding: 5px;
+                    padding-right: 40px;
+                    padding-left: 40px;
+                    margin: 0;
+                    margin-right: 10px;
+                }
+            }   
+    
+    
+    
+        }
+
+    }
+
+   .tagRac{
+        display: flex;
+        justify-content: space-between;
+
+       .tags{
+            display: flex;
+            margin:0;
+            margin-top: 20px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+    
+            p{
+                display: flex;
+                font-weight: 700;
+                font-size: 14px;
+                background-color:  $roserange;
+                color: white;
+                border-radius: 10px;
+                padding: 5px;
+                padding-right: 40px;
+                padding-left: 40px;
+                margin: 0;
+                margin-right: 10px;
+            }
+        }   
+
+
+
+    }
+
+    .racName{
+
+
+        .host{
             display: flex;
             align-items: center;
             margin-top: 25px;
@@ -47,36 +112,11 @@
             }
         }
 
-    }
 
-   .tagRac{
-        display: flex;
-        justify-content: space-between;
-
-       .tags{
-            display: flex;
-            margin:0;
-            margin-top: 20px;
-            margin-bottom: 24px;
-    
-            p{
-                display: flex;
-                font-weight: 700;
-                font-size: 14px;
-                background-color:  $roserange;
-                color: white;
-                border-radius: 10px;
-                padding: 5px;
-                padding-right: 40px;
-                padding-left: 40px;
-                margin: 0;
-                margin-right: 10px;
-            }
-        }   
-
-       .starBox{
+        .starBox{
             display: flex;
             align-items: center;
+            margin-top: 15px;
 
            .starContent{
             
@@ -101,11 +141,11 @@
 
        .boxCrit {
           flex: 0 1 582px; /* Prend toute la largeur par défaut */
-          max-width: 582px;
-          margin-bottom: 20px; /* Ajouté pour espacement vertical */
+          max-width: 782px;
+          margin-bottom: 20px; 
     
           @media (min-width: 800px) {
-            flex: 0 1 48%; /* 48% de largeur sur écrans moyens et grands */
+            flex: 0 1 48%; 
 
             
 
@@ -115,7 +155,7 @@
             margin-bottom: 15px;
     
            .groupAbout {
-              max-width: 100%; /* Ajusté pour une meilleure réactivité */
+              max-width: 100%; 
               background-color: #ff6060;
               display: flex;
               flex-direction: row;
@@ -169,6 +209,12 @@
         }
     }
 
+    .placement{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
 
 }
 
@@ -184,38 +230,62 @@
              display: flex;
              flex-direction: column;
              align-items: center; 
+
  
             .boxCrit {
+                width: 799px;
                  flex: 1; 
                  width: 100%; 
                  margin-bottom: 20px; 
              }
          }
 
-         .des{
-            flex-wrap: wrap;
+         .placement{
 
-            .host{
-
-                p{
-                    text-align: start;
-                    order: 2;
-                    margin-right: 0px;
-                    margin-left: 10px;
+            .des{
+                flex-wrap: wrap;
+    
+                .host{
+    
+                    p{
+                        text-align: start;
+                        order: 2;
+                        margin-right: 0px;
+                        margin-left: 10px;
+                    }
+            
                 }
+
+                .tagRac{
+                    flex-wrap: wrap;
+                    
+                    .tags{ 
+                        order: 1;
         
+                        p{
+                            margin-top: 10px;
+                        }
+                    
+                    }
+        
+                 }
+    
+    
+            }
+
+            .racName{
+                display: flex;
+                justify-content: space-between;
+                width: 700px;
             }
 
 
-         }
 
-         .tagRac{
-            flex-wrap: wrap;
-            
-            .tags{ 
-                order: 1;}
+        }
 
-         }
+
+
+
      }
  
  }
@@ -245,6 +315,7 @@
     } 
 
     .logementPerso{
+        max-width: 400px;
 
         margin-left: 20px;
         margin-right: 20px;
@@ -274,9 +345,37 @@
 
             }
 
+            .tagRac{
+                flex-wrap: wrap;
+
+                .tags{ 
+
+                    p{
+                        margin-top: 5px;
+                        font-size: 10px;
+                        padding-right: 20px;
+                        padding-left: 20px;
+                        
+                    }
+                }
+                
+
+            }
+        
+        }
+
+        .racName{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-between;
+            align-items: center;
+
+            width: 400px;
+
             .host{
-
-
+                order: 1;
+                margin-top: 0;
+                margin-bottom: 13px;
                 p{
                     order: 0;
                     text-align: end;
@@ -288,7 +387,6 @@
 
                 }
 
-
                 img{
                     order: none;
                     height: 32px;
@@ -297,8 +395,26 @@
         
             }
 
+            .starBox{
+                order: 0;
+                display: flex;
+                align-items: center;
+                margin-top: -10px;
+    
+               .starContent{
+                
+                    img{
+                        width: 18px;
+                        margin: 3px;
+        
+                    }
+        
+                }
+                
+            }
 
         }
+
 
         .tagRac{
         flex-wrap: wrap;
@@ -309,6 +425,7 @@
                     padding-right: 20px;
                     padding-left: 20px;
                     flex-wrap: wrap;
+                    border-radius: 8px;
                 } 
                 
         
@@ -338,7 +455,9 @@
                             font-size: 13px;
                         }
                         .arrow{
-                            font-size: 13px;
+
+                            height: 20px;
+                            width: auto;
                         }
                     }
     
@@ -346,6 +465,12 @@
 
             }
         
+        }
+
+        .placement{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
 
        

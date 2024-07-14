@@ -26,33 +26,38 @@ const LogementInfo = () => {
   return (
     <div className="logementPerso">
       <SlideShow />
-      <div className='des'>
-        <div className='nameLoc'>
-          <h2>{logement?.title}</h2>
-          <p className='zone'>{logement?.location}</p>
+      <div className='placement'>
+        <div className='des'>
+          <div className='nameLoc'>
+            <h2>{logement?.title}</h2>
+            <p className='zone'>{logement?.location}</p>
+          </div>
+
+
+          <div className='tagRac'>
+
+            <div className='tags'>
+              {logement?.tags?.map((tag, index) => (
+                <p key={index}>{tag}</p>
+              ))}
+            </div>
+          </div>
+
         </div>
+
+        <div className='racName'>
 
         <div className='host'>
           <p>{logement?.host?.name}</p>
           <img src={logement?.host?.picture} alt={logement?.host?.name} />
         </div>
 
-      </div>
-
-        <div className='tagRac'>
-
-          <div className='tags'>
-          {logement?.tags?.map((tag, index) => (
-            <p key={index}>{tag}</p>
-          ))}
-          </div>
-
           {logement && logement.rating && (
-          <Ratings number={logement?.rating} />
-        )}
-
+            <Ratings number={logement?.rating} />
+          )}
 
         </div>
+      </div>
       
 
       <div className='box'>
