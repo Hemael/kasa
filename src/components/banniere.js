@@ -1,10 +1,11 @@
+
 import banniere from '../datas/banniere.png';
 
-const Banniere = () => {
+const Banniere = ({ showText = true, image = banniere }) => {
   return (
     <div className="boxBanniere">
-      <h1>Chez vous, partout et ailleurs</h1>
-      <img src={banniere} alt="img montagne" className="banniereImg"/> 
+      {showText && <h1>Chez vous, partout et ailleurs</h1>}
+      <img src={image} alt="img montagne" className="banniereImg"/> 
     </div>
   );
 };

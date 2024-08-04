@@ -415,11 +415,11 @@
   font-family: "Montserrat", sans-serif;
   padding: 10px;
 }
-.about .banniere {
+.about .boxBanniere {
   position: relative;
   margin-top: 38px;
 }
-.about .banniere img {
+.about .boxBanniere img {
   display: flex;
   -o-object-fit: cover;
      object-fit: cover;
@@ -428,7 +428,7 @@
   max-height: 223px;
   border-radius: 25px;
 }
-.about .banniere::before {
+.about .boxBanniere::before {
   content: "";
   position: absolute;
   top: 0;
@@ -497,11 +497,11 @@
   .about {
     max-width: 335px;
   }
-  .about .banniere {
+  .about .boxBanniere {
     position: relative;
     margin-top: 19px;
   }
-  .about .banniere img {
+  .about .boxBanniere img {
     display: flex;
     -o-object-fit: cover;
        object-fit: cover;
@@ -510,7 +510,7 @@
     max-height: 111px;
     border-radius: 10px;
   }
-  .about .banniere::before {
+  .about .boxBanniere::before {
     content: "";
     position: absolute;
     top: 0;

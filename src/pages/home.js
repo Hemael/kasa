@@ -1,3 +1,4 @@
+// home.js
 import "../sass/main.css";
 import Banniere from '../components/banniere';
 import LogementsList from '../components/logementsList';
