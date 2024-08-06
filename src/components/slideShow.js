@@ -20,14 +20,16 @@ const SlideShow = () => {
     <div className="caroussel">
       <img src={logement.pictures[currentIndex]} alt={logement.title} />
       {logement.pictures.length > 1 && (
-        <div className='boutonDir'>
-          <button onClick={handlePrev} className='precedent'> ‹ </button>
-          <button onClick={handleNext} className='suivant'> › </button>
-        </div>
+        <>
+          <div className='boutonDir'>
+            <button onClick={handlePrev} className='precedent'> ‹ </button>
+            <button onClick={handleNext} className='suivant'> › </button>
+          </div>
+          <div className='compteur'>
+            {currentIndex + 1}/{logement.pictures.length}
+          </div>
+        </>
       )}
-      <div className='compteur'>
-        {currentIndex + 1}/{logement.pictures.length}
-      </div>
     </div>
   );
 };
